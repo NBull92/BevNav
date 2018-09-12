@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout
+   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  
+	<!-- Activity Layout -->
+	<RelativeLayout 
+	    
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:layout_margin="0dp"
+	    tools:context="biz.nickbullcomputing.bevnav.MainActivity" >
+	
+	    <fragment
+	        android:id="@+id/map"
+	        android:name="com.google.android.gms.maps.SupportMapFragment"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_alignParentRight="true" />
+
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/testPopUp"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentStart="true"
+			android:background="@drawable/alchopops_popup_background"
+			android:layout_alignParentEnd="true" />
+
+		<Button
+			style="?android:attr/buttonStyleSmall"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="X"
+			android:id="@+id/btnPopupClose"
+			android:layout_marginTop="65dp"
+			android:layout_alignParentTop="true"
+			android:layout_alignParentEnd="true"
+			android:layout_marginEnd="53dp"
+            android:onClick="btnPopupClose_onClick"
+            android:nestedScrollingEnabled="false"
+            android:background="@drawable/popup_close_btn"
+			android:textSize="25dp"/>
+
+		<CheckedTextView
+            android:layout_width="120dp"
+            android:maxWidth="120dp"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="BarName"
+			android:id="@+id/txtBarName"
+			android:layout_marginStart="55dp"
+			android:layout_below="@+id/btnPopupClose"
+			android:layout_alignParentStart="true" />
+
+		<TextView
+            android:layout_width="120dp"
+            android:maxWidth="120dp"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:text="BarAddress"
+			android:id="@+id/txtBarAddress"
+			android:layout_below="@+id/txtBarName"
+			android:layout_alignStart="@+id/txtBarName" />
+
+
+        <ImageView
+            android:layout_width="110dp"
+            android:maxWidth="110dp"
+            android:layout_height="100dp"
+            android:maxHeight="100dp"
+            android:id="@+id/imgBar"
+            android:layout_below="@+id/btnPopupClose"
+            android:layout_alignStart="@+id/txtFeatured_Offer"
+            android:layout_alignEnd="@+id/btnPopupClose"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/the_mailboxv2"
+            android:layout_marginTop="5dp" />
+
+		<TextView
+			android:id="@+id/txtFeatured_Offer"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignWithParentIfMissing="false"
+			android:layout_marginRight="0dp"
+			android:text="@string/featured_offer"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_below="@+id/imgBar"
+			android:layout_alignEnd="@+id/btnPopupClose" />
+
+		<TextView
+			android:id="@+id/txtFeatured_Offer_details"
+			android:layout_width="110dp"
+			android:layout_height="wrap_content"
+			android:text="Deal Details"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_below="@+id/txtFeatured_Offer"
+			android:layout_alignStart="@+id/txtFeatured_Offer"
+			android:maxWidth="110dp" />
+
+		<TextView
+			android:id="@+id/txtOther_Offers"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignLeft="@+id/txtFeatured_Offer_details"
+			android:layout_below="@+id/txtFeatured_Offer_details"
+			android:layout_marginTop="17dp"
+			android:text="Other Offers:"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:visibility="visible"/>
+
+		<ListView
+			android:id="@+id/lstOtherOffers"
+			android:layout_width="110dp"
+			android:layout_height="102dp"
+            android:maxWidth="110dp"
+            android:maxHeight="102dp"
+			android:layout_alignLeft="@+id/txtOther_Offers"
+			android:layout_below="@+id/txtOther_Offers"/>
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+	</RelativeLayout>
+
+	<!-- Side navigation drawer UI -->
+	<ListView
+	    android:id="@+id/navList"
+	    android:layout_width="200dp"
+	    android:layout_height="match_parent"
+	    android:layout_gravity="left|start"
+	    android:background="#ffeeeeee"/>
+
+</android.support.v4.widget.DrawerLayout>

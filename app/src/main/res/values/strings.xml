@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name" translatable="false">BevNav</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="google_maps_key" translatable="false">AIzaSyDry_GGy2JVavyEUc09GR0Atry1n1ri6HU</string>
+    <string name="action_search">Search Location</string>
+    <string name="action_favourites">Favourites</string>
+    <string name="action_key">Key</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_remove">Remove Location Filter</string>
+    <string name="countrylabel">""</string>
+    <string name="title_activity_pub_details">Details</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="featured_offer">Featured Offer:</string>
+    <string name="other_offers">Other Offers:</string>
+    <string name="title_activity_test">Test</string>
+
+</resources>

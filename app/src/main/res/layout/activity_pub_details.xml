@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:id="@+id/relativeLayout"
+    tools:context="biz.nickbullcomputing.bevnav.PubDetails"
+    android:background="@drawable/beer_background">
+
+<!--     <FrameLayout -->
+<!--         android:id="@+id/frmBackground" -->
+<!--         android:layout_width="wrap_content" -->
+<!--         android:layout_height="wrap_content" -->
+<!--         android:contentDescription="This will have a different coloured design based on drink offer" > -->
+
+<!--     </FrameLayout> -->
+
+    <TextView
+        android:id="@+id/txtOther_Offers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtFeatured_Offer_details"
+        android:layout_below="@+id/txtFeatured_Offer_details"
+        android:layout_marginTop="17dp"
+        android:text="Other Offers:"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:visibility="visible"/>
+
+    <ListView
+        android:id="@+id/lstOtherOffers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtOther_Offers"
+        android:layout_below="@+id/txtOther_Offers">
+    </ListView>
+
+    <TextView
+        android:id="@+id/txtPub_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPub_name"
+        android:layout_below="@+id/txtPub_name"
+        android:layout_marginTop="34dp"
+        android:text="Pub_Address"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtPub_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="41dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="19dp"
+        android:text="Pub_Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:width="160dp" />
+
+    <TextView
+        android:id="@+id/txtFeatured_Offer_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtFeatured_Offer"
+        android:layout_below="@+id/txtFeatured_Offer"
+        android:layout_marginTop="31dp"
+        android:text="Deal Details"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <ImageView
+        android:id="@+id/imgBarThumb"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtPub_address"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_below="@+id/txtPub_name"
+        android:layout_centerHorizontal="false"
+        android:layout_centerInParent="false"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="25dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="90dp"
+        android:maxWidth="90dp"
+        android:src="@drawable/the_mailbox" />
+
+    <TextView
+        android:id="@+id/txtFeatured_Offer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_marginRight="0dp"
+        android:text="@string/featured_offer"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/imgBarThumb"
+        android:layout_marginStart="25dp"
+        android:layout_alignLeft="@+id/imgBarThumb" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button"
+        android:layout_below="@+id/imgBarThumb"
+        android:layout_toEndOf="@+id/txtPub_name"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>
